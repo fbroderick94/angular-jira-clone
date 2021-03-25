@@ -1,0 +1,19 @@
+{
+  "name": "angular-jira-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fbroderick94/angular-jira-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fbroderick94/angular-jira-clone/issues"
+  },
+  "homepage": "https://github.com/fbroderick94/angular-jira-clone#readme"
+}
