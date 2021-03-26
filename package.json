@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install-dependencies": "npm i && cd frontend && npm i",
+    "start:front": "cd frontend && npm start",
+    "build:front": "cd frontend && npm run build",
+    "test:front": "cd frontend && npm run test",
+    "start": "npm run start:front",
+    "build": "npm run build:front"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,13 @@
+<aside class="navbarLeft">
+    <div class="navbarLeft-content">
+        <div class="logoLink" title="Jira Clone">
+            <svg class="h-8 w-8 text-textLogo"></svg>
+        </div>
+    </div>
+    <div *ngFor="let item of items"
+             class="item">
+             <div (click)="item.handler()">{{item.icon}}</div>
+    
+             </div>
+
+</aside>
