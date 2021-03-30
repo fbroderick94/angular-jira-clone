@@ -6,6 +6,9 @@ import { SidebarComponent } from './components/navigation/sidebar/sidebar.compon
 import { ResizerComponent } from './components/navigation/resizer/resizer.component';
 import { ProjectComponent } from './project.component';
 import { ProjectRoutingModule } from './project-routing.module';
+import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NZ_JIRA_ICONS } from './config/icons';
 
 
 
@@ -13,7 +16,9 @@ import { ProjectRoutingModule } from './project-routing.module';
   declarations: [ProjectComponent, NavbarLeftComponent, NavigationComponent, SidebarComponent, ResizerComponent],
   imports: [
     CommonModule,
-    ProjectRoutingModule
+    ProjectRoutingModule,
+    NzToolTipModule,
+    NzIconModule.forChild(NZ_JIRA_ICONS)
   ]
 })
 export class ProjectModule { }

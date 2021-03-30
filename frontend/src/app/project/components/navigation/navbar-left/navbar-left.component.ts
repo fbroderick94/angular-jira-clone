@@ -8,23 +8,26 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarLeftComponent implements OnInit {
   items: NavItem[] = [];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.items = [
+      new NavItem('search', 'Search', this.openSearchDrawer.bind(this)),
       new NavItem('plus', 'Create issue', this.openCreateIssueModal.bind(this))
     ];
   }
 
-  openCreateIssueModal(){
-    console.log("OPening modal")
+  openCreateIssueModal() {
+    console.log('OPening modal');
   }
 
+  openSearchDrawer() {
+    console.log('OPening search Drawer');
+  }
 }
 
-class NavItem{
-  constructor(public icon: string, public tooltip: string, public handler: Handler){}
+class NavItem {
+  constructor(public icon: string, public tooltip: string, public handler: Handler) {}
 }
-
 
 type Handler = () => void;
