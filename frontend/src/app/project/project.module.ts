@@ -9,16 +9,22 @@ import { ProjectRoutingModule } from './project-routing.module';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NZ_JIRA_ICONS } from './config/icons';
-
-
+import { JiraControlModule } from '../jira-control/jira-control.module';
 
 @NgModule({
-  declarations: [ProjectComponent, NavbarLeftComponent, NavigationComponent, SidebarComponent, ResizerComponent],
+  declarations: [
+    ProjectComponent,
+    NavbarLeftComponent,
+    NavigationComponent,
+    SidebarComponent,
+    ResizerComponent
+  ],
   imports: [
     CommonModule,
     ProjectRoutingModule,
     NzToolTipModule,
-    NzIconModule.forChild(NZ_JIRA_ICONS)
+    NzIconModule.forChild(NZ_JIRA_ICONS),
+    JiraControlModule
   ]
 })
-export class ProjectModule { }
+export class ProjectModule {}

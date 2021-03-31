@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-resizer',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resizer.component.scss']
 })
 export class ResizerComponent implements OnInit {
+  @Input() expanded: boolean;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  get icon() {
+    return this.expanded ? 'chevron-left' : 'chevron-right';
   }
 
+  ngOnInit(): void {}
 }
