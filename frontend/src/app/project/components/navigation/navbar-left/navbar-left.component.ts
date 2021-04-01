@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NzDrawerService } from 'ng-zorro-antd/drawer';
+import { NzModalService } from 'ng-zorro-antd/modal';
 @Component({
   selector: 'app-navbar-left',
   templateUrl: './navbar-left.component.html',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarLeftComponent implements OnInit {
   items: NavItem[] = [];
 
-  constructor() {}
+  constructor(private _drawerService: NzDrawerService, private _modalService: NzModalService) {}
 
   ngOnInit(): void {
     this.items = [
@@ -18,11 +19,21 @@ export class NavbarLeftComponent implements OnInit {
   }
 
   openCreateIssueModal() {
-    console.log('OPening modal');
+    this._modalService.create({
+      nzContent: '<div>Hello</div>',
+      nzClosable: false,
+      nzFooter: null,
+      nzWidth: 700
+    });
   }
 
   openSearchDrawer() {
-    console.log('OPening search Drawer');
+    this._drawerService.create({
+      nzTitle: 'Hello',
+      nzPlacement: 'left',
+      nzClosable: false,
+      nzWidth: 500
+    });
   }
 }
 
